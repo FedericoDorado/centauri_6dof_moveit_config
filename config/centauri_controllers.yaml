@@ -1,0 +1,22 @@
+controller_names:
+  - centauri_arm_controller
+  - centauri_hand_controller
+
+centauri_arm_controller:
+  action_ns: follow_joint_trajectory
+  type: FollowJointTrajectory
+  default: true
+  joints:
+    - joint1
+    - joint2
+    - joint3
+    - joint4
+    - joint5
+    - joint6
+
+centauri_hand_controller:
+  action_ns: gripper_cmd
+  type: GripperCommand
+  default: true
+  joints:
+    - joint_gear1

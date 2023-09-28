@@ -1,0 +1,18 @@
+controller_list:
+  - name: fake_centauri_arm_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - joint1
+      - joint2
+      - joint3
+      - joint4
+      - joint5
+      - joint6
+  - name: fake_centauri_hand_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - joint_gear1
+      - joint_gear2
+initial:  # Define initial robot poses per group
+  - group: centauri_arm
+    pose: home

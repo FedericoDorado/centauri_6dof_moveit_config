@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="centauri6dof">
+  
+  <xacro:arg name="initial_positions_file" default="initial_positions.yaml" />
+
+  <!-- Import panda urdf file -->
+  <xacro:include filename="$(find centauri_6dof_moveit_config)/models/centauri.urdf" />
+
+  <!-- Import panda ros2_control description -->
+  <xacro:include filename="centauri.ros2_control.xacro" />
+  <xacro:include filename="centauri_hand.ros2_control.xacro" />
+
+  <xacro:centauri_ros2_control name="CentauriFakeSystem" initial_positions_file="$(arg initial_positions_file)"/>
+  <xacro:centauri_hand_ros2_control name="CentauriHandFakeSystem"/>   
+</robot>

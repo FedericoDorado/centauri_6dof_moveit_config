@@ -1,0 +1,1 @@
+# centauri_6dof_moveit_config
